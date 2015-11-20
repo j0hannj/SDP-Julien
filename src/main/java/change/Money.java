@@ -4,7 +4,8 @@ package change;
  * Created by johann on 20/11/2015.
  */
 
-public class Money {
+public class Money
+    {
 
     /**
      * Created by johann on 20/11/2015.
@@ -20,6 +21,12 @@ public class Money {
         public double getChange() {
             return this.usd;
         }
+
+        public String getName(){
+            return this.name;
+        }
+
+
 
 
     }
