@@ -14,6 +14,8 @@ public class Change {
         fenetre.setSize(400,400);
         fenetre.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         fenetre.setVisible(true);
-        Money usd= new Money("usd", 1);
+        Money usd= new Money("USD", 1);
+        Money eur= new Money("EUR",1.06918);
+        Money gbp=new Money("GBP",1.52775);
     }
 }
