@@ -41,15 +41,21 @@ public class Change extends JFrame{
     {
         return bouton;
     }
-    public Object getComboStat()
+    public Object getComboStat1()
     {
         //javax.swing.JOptionPane.showMessageDialog(null,"Ton message");
         return Box1.getSelectedItem();
     }
 
+    public Object getComboStat2()
+    {
+        //javax.swing.JOptionPane.showMessageDialog(null,"Ton message");
+        return Box2.getSelectedItem();
+    }
+
     private void build(){
         setTitle("Convertisseur"); //On donne un titre à l'application
-        setSize(600,200); //On donne une taille à notre fenêtre
+        setSize(600,300); //On donne une taille à notre fenêtre
         setLocationRelativeTo(null); //On centre la fenêtre sur l'écran
         setResizable(false); //On interdit la redimensionnement de la fenêtre
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //On dit à l'application de se fermer lors du clic sur la croix
@@ -81,7 +87,7 @@ public class Change extends JFrame{
 
         panel.add(field2);*/
 
-        bouton = new JButton(new CalculConvert(this, "Calculer"));
+        bouton = new JButton("Calculer");
 
         panel.add(bouton);
 

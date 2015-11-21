@@ -4,16 +4,19 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.AbstractAction;
 
-public class CalculConvert extends AbstractAction {
-    private  Change fenetre;
+public class CalculConvert{
+    private Money m1;
+    private Money m2;
 
-    public CalculConvert(Change fenetre, String texte){
-        super(texte);
 
-        this.fenetre = fenetre;
+    public CalculConvert(Money m1, Money m2){
+        this.m1=m1;
+        this.m2=m2;
+
     }
 
-    public void actionPerformed(ActionEvent e) {
-
-     }
+    public double Convert()
+    {
+        return m1.getChange()/m2.getChange();
+    }
 }
