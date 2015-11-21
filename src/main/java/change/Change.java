@@ -14,6 +14,9 @@ public class Change extends JFrame{
     //private JTextField field2;
     private static JComboBox Box1;
     private static JComboBox Box2;
+    private JLabel label1;
+    private JButton bouton;
+
 
     public Change(){
         super();
@@ -28,6 +31,20 @@ public class Change extends JFrame{
             Box1.addItem(listemoney.get(i).getName());
             Box2.addItem(listemoney.get(i).getName());
         }
+    }
+
+    public JLabel getLabel()
+    {
+        return label1;
+    }
+    public JButton getButon()
+    {
+        return bouton;
+    }
+    public Object getComboStat()
+    {
+        //javax.swing.JOptionPane.showMessageDialog(null,"Ton message");
+        return Box1.getSelectedItem();
     }
 
     private void build(){
@@ -64,9 +81,12 @@ public class Change extends JFrame{
 
         panel.add(field2);*/
 
-        JButton bouton = new JButton(new CalculConvert(this, "Calculer"));
+        bouton = new JButton(new CalculConvert(this, "Calculer"));
 
         panel.add(bouton);
+
+        label1= new JLabel("....");
+        panel.add(label1);
 
         return panel;
     }
@@ -83,7 +103,7 @@ public class Change extends JFrame{
 
 
         Change fenetre= new Change();
-        comboAdd(l);
-        fenetre.setVisible(true);
+        GetAction action= new GetAction(fenetre,l);
+
     }
 }

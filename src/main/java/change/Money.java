@@ -11,7 +11,7 @@ public class Money
      * Created by johann on 20/11/2015.
      */
         String name;
-        double usd;
+        double usd;//USD/money ratio
 
         public Money(String name, double usd) {
             this.name = name;
