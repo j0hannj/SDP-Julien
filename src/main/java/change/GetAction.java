@@ -29,6 +29,8 @@ public class GetAction extends AbstractAction {
         String m2=fenetre.getComboStat2().toString();
         Money M1= new Money("",0);
         Money M2= new Money("",0);
+        double c=0;
+        Boolean done=true;
 
         for(int i=0; i<list.size();i++)
         {
@@ -38,8 +40,19 @@ public class GetAction extends AbstractAction {
                 M2=list.get(i);
 
         }
-        CalculConvert conv= new CalculConvert(M1,M2);
-        fenetre.getLabel().setText(Double.toString(conv.Convert()));
+        String text= fenetre.getField().getText();
+        try {
+          c = Double.parseDouble(text);
+        } catch(NumberFormatException ex)
+        {
+            javax.swing.JOptionPane.showMessageDialog(null,"entrer un nombre reel!\n le separateur est un point, merci");
+            done=false;
+        }
+
+        if(done) {
+            CalculConvert conv = new CalculConvert(M1, M2);
+            fenetre.getLabel().setText(Double.toString(c * conv.Convert()));
+        }
 
     }
 }

@@ -23,7 +23,10 @@ public class Change extends JFrame{
 
         build();//On initialise notre fenêtre
     }
-
+    public JTextField getField()
+    {
+        return field1;
+    }
     public static  void comboAdd(List<Money> listemoney)
     {
         for(int i = 0; i < listemoney.size(); i++)
@@ -55,7 +58,7 @@ public class Change extends JFrame{
 
     private void build(){
         setTitle("Convertisseur"); //On donne un titre à l'application
-        setSize(600,300); //On donne une taille à notre fenêtre
+        setSize(500,75); //On donne une taille à notre fenêtre
         setLocationRelativeTo(null); //On centre la fenêtre sur l'écran
         setResizable(false); //On interdit la redimensionnement de la fenêtre
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); //On dit à l'application de se fermer lors du clic sur la croix
