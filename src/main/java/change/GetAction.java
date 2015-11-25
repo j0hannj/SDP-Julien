@@ -56,7 +56,7 @@ public class GetAction extends AbstractAction {
 
             if (done) {
                 CalculConvert conv = new CalculConvert(M1, M2);
-                fenetre.getLabel().setText(Double.toString(c * conv.Convert()));
+                fenetre.getLabel().setText(Double.toString(c * conv.Convert())+" "+M2.getName());
             }
         }
 
