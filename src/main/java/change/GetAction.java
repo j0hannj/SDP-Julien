@@ -40,18 +40,24 @@ public class GetAction extends AbstractAction {
                 M2=list.get(i);
 
         }
-        String text= fenetre.getField().getText();
-        try {
-          c = Double.parseDouble(text);
-        } catch(NumberFormatException ex)
+        if(m1==m2)
         {
-            javax.swing.JOptionPane.showMessageDialog(null,"entrer un nombre reel!\n le separateur est un point, merci");
-            done=false;
-        }
+            javax.swing.JOptionPane.showMessageDialog(null,"entrer deux devises differentes!");
 
-        if(done) {
-            CalculConvert conv = new CalculConvert(M1, M2);
-            fenetre.getLabel().setText(Double.toString(c * conv.Convert()));
+        }
+        else {
+            String text = fenetre.getField().getText();
+            try {
+                c = Double.parseDouble(text);
+            } catch (NumberFormatException ex) {
+                javax.swing.JOptionPane.showMessageDialog(null, "entrer un nombre reel!\n le separateur est un point, merci");
+                done = false;
+            }
+
+            if (done) {
+                CalculConvert conv = new CalculConvert(M1, M2);
+                fenetre.getLabel().setText(Double.toString(c * conv.Convert()));
+            }
         }
 
     }

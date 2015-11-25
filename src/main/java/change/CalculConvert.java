@@ -17,6 +17,7 @@ public class CalculConvert{
 
     public double Convert()
     {
-        return m1.getChange()/m2.getChange();
+        double conv= m2.getChange()/m1.getChange();
+        return conv;
     }
 }
