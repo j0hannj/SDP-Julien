@@ -5,7 +5,7 @@ package change;
  */
 
 public class Money
-    {
+    {// la classe Money qui prend en argument un nom et un taux de change avec le dollars (USD/monnaie)
 
     /**
      * Created by johann on 20/11/2015.
