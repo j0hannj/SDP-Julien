@@ -8,7 +8,8 @@ import java.util.List;
 import java.util.ListIterator;
 
 
-public class Change extends JFrame{
+public class Change extends JFrame{//classe vue
+   // les attributs de cette classe sont des  objets appartenant à la fenetre
     private JTextField field1;
     private static JComboBox Box1;
     private static JComboBox Box2;
@@ -29,7 +30,7 @@ public class Change extends JFrame{
     {
         for(int i = 0; i < listemoney.size(); i++)
         {
-            Box1.addItem(listemoney.get(i).getName());
+            Box1.addItem(listemoney.get(i).getName());// On initialise la liste des choix dans la combobox
             Box2.addItem(listemoney.get(i).getName());
         }
     }
@@ -63,7 +64,7 @@ public class Change extends JFrame{
         setContentPane(buildContentPane());
     }
 
-    private JPanel buildContentPane(){
+    private JPanel buildContentPane(){// On initialise et on ajoute les attributs à la fenetre
         JPanel panel = new JPanel();
         panel.setLayout(new GridBagLayout());
 
@@ -95,11 +96,6 @@ public class Change extends JFrame{
 
         panel.add(Box2, constraints);
 
-        /*field2 = new JTextField();
-        field2.setColumns(10);
-
-        panel.add(field2);*/
-
         constraints.gridx = 1;
         constraints.gridy = 1;
         bouton = new JButton("Calculer");
@@ -121,7 +117,7 @@ public class Change extends JFrame{
 
     public static void main(String[] args)
     {
-        List l = new LinkedList<Money>();
+        List l = new LinkedList<Money>();// Ici on crée les monnaies, on passe la liste creer dans la classe GetAction (qui est notre controleur)
 
         l.add(new Money("USD",1));
         l.add(new Money("EUR",0.94));
